@@ -7,51 +7,13 @@ from operator import itemgetter
 
 class guess_number:
 
-    # def write_scores(self,player_name,score,games):
-    #     players = {"name":player_name,"score": score,"games": games}
-    #     playersList = []
-    #     checkList = []
-    #     need_update=0
-    #     with open('scores.txt','a+') as file:
-    #         if os.stat("scores.txt").st_size == 0: #if scores.txt size == 0
-    #             json.dump(players,file) #insert data
-    #             file.write('\n') #insert line
-    #             file.close() 
-    #         else:
-    #             file.seek(0,os.SEEK_SET) #set pointer at beginning
-    #             for jsonObj in file:
-    #                 playersDict = json.loads(jsonObj)
-    #                 playersList.append(playersDict)
-    #             for pl in playersList:
-    #                 if pl["name"]==player_name:
-    #                     pl["score"]=score
-    #                     pl["games"]=games
-    #                     need_update=1
-    #                 checkList.append(pl)
-    #             if need_update==0 :
-    #                 file.seek(0,os.SEEK_END)
-    #                 json.dump(players,file)
-    #                 file.write('\n')
-    #                 file.close() 
-    #             else:
-    #                 file.seek(0,os.SEEK_SET)
-    #                 file.truncate(0) #delete data from file 
-    #                 json.dump(checkList,file)
-    #                 file.write('\n')
-    #                 file.close() 
-
     def write_scores(self,player_name,score,games):
         players = {"name":player_name,"score": score,"games": games}
         with open('scores.json','a+') as file:
             json.dump(players,file) #insert data
             file.write('\n') #insert line
             file.close()
-
-  
-
-
-                
-
+ 
     def game(self,player):
         global games_played
         global score
