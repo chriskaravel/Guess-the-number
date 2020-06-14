@@ -3,6 +3,7 @@ games_played=0
 high_score=0
 import os
 import json
+import random
 
 class guess_number:
 
@@ -18,7 +19,6 @@ class guess_number:
         global score
         global high_score
         games_played+=1
-        import random
         number=random.randint(1,20)
         turns=6
         num_guesses=0
