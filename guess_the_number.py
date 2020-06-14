@@ -3,7 +3,6 @@ games_played=0
 high_score=0
 import os
 import json
-from operator import itemgetter
 
 class guess_number:
 
