@@ -54,6 +54,7 @@ class guess_number:
         if guess_correct==False:
             print('Sorry. The number I was thinking of was ' + str(number))
             high_score=high_score+score[num_guesses]
+            
     def __init__(self):
         super().__init__()
         answer = None
