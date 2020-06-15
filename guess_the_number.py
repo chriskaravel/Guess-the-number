@@ -12,7 +12,6 @@ class guess_number:
         with open('scores.json','a+') as file:
             json.dump(players,file) #insert data
             file.write('\n') #insert line
-            file.close()
  
     def game(self,player):
         global games_played
